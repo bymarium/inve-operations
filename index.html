@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio de Optimización</title>
+  <meta name="description" content="Aplicativo semiautomatizado de Investigación de Operaciones: método gráfico, transporte, cadenas de Markov y teoría de colas.">
+  <link rel="stylesheet" href="src/ui/styles.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="top glass">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">∑</span>
+      <div>
+        <h1>Laboratorio de Optimización</h1>
+        <p>Investigación de Operaciones · Aplicativo semiautomatizado</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Modelos">
+      <button role="tab" id="tab-lp" aria-controls="lp" aria-selected="true">Método gráfico</button>
+      <button role="tab" id="tab-transport" aria-controls="transport" aria-selected="false">Transporte</button>
+      <button role="tab" id="tab-markov" aria-controls="markov" aria-selected="false">Cadenas de Markov</button>
+      <button role="tab" id="tab-queues" aria-controls="queues" aria-selected="false">Teoría de colas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="lp" role="tabpanel" aria-labelledby="tab-lp"></section>
+    <section id="transport" role="tabpanel" aria-labelledby="tab-transport" hidden></section>
+    <section id="markov" role="tabpanel" aria-labelledby="tab-markov" hidden></section>
+    <section id="queues" role="tabpanel" aria-labelledby="tab-queues" hidden></section>
+  </main>
+
+  <footer>Los resultados se recalculan automáticamente al cambiar cualquier dato. Usa coma o punto como separador decimal.</footer>
+
+  <script type="module" src="src/ui/app.js"></script>
+</body>
+</html>
